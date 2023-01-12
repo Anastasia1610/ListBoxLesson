@@ -1,0 +1,30 @@
+﻿<Window x:Class="ListBoxLesson.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListBoxLesson"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox Name="Shop" SelectionMode="Single" SelectionChanged="Shop_SelectionChanged" Height="200" Width="400" VerticalAlignment="Top" HorizontalAlignment="Left">
+         
+        </ListBox>
+
+        <StackPanel VerticalAlignment="Center" Orientation="Vertical">
+            <TextBox Name="NameField" Height="40" Width="200"/>
+            <TextBox Name="PriceField" Height="40" Width="200"/>
+            <TextBox Name="DescriptionField" Height="40" Width="300"/>
+        </StackPanel>
+        
+        <Button Height="40" Width="80" Margin="0, 200, 0, 0" Content="OK" Click="Button_Click"/>
+
+        <TextBox Name="DescriptionOutput" Height="50" Width="300" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 50, 20, 0"/>
+
+        <ListBox Name="Cart"  Height="100" Width="400" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            
+        </ListBox>
+
+        <Button Name="AddBtn" Content="Add" Height="40" Width="50" VerticalAlignment="Bottom" Margin="0,0, 0. 20" Click="AddBtn_Click"/>
+    </Grid>
+</Window>
