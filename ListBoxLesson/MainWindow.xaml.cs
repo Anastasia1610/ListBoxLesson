@@ -30,7 +30,7 @@ namespace ListBoxLesson
            
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void OkBtn_Click(object sender, RoutedEventArgs e)
         {
             int.TryParse(PriceField.Text, out int res);
             Product product = new Product(NameField.Text, res, DescriptionField.Text);

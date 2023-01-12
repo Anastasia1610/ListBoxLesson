@@ -5,26 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ListBoxLesson"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Shop" Height="450" Width="800">
     <Grid>
-        <ListBox Name="Shop" SelectionMode="Single" SelectionChanged="Shop_SelectionChanged" Height="200" Width="400" VerticalAlignment="Top" HorizontalAlignment="Left">
+        <Grid.Background>
+            <ImageBrush ImageSource="Shop.jpg"/>
+        </Grid.Background>
+
+        <TextBlock Text="Goods" Height="15" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,20,0,0" Foreground="White"/>
+        <ListBox Name="Shop" SelectionMode="Single" SelectionChanged="Shop_SelectionChanged" Height="80" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20, 40">
          
         </ListBox>
 
-        <StackPanel VerticalAlignment="Center" Orientation="Vertical">
-            <TextBox Name="NameField" Height="40" Width="200"/>
-            <TextBox Name="PriceField" Height="40" Width="200"/>
-            <TextBox Name="DescriptionField" Height="40" Width="300"/>
-        </StackPanel>
-        
-        <Button Height="40" Width="80" Margin="0, 200, 0, 0" Content="OK" Click="Button_Click"/>
+        <Button Name="AddBtn" Content="Add to Cart" Height="20" Width="80" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20, 140" Click="AddBtn_Click"/>
 
-        <TextBox Name="DescriptionOutput" Height="50" Width="300" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 50, 20, 0"/>
+        <TextBlock Text="Description" Height="15" Width="70" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,20,250,0" Foreground="White"/>
+        <TextBox Name="DescriptionOutput" Height="50" Width="300" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 40, 20, 0"/>
 
-        <ListBox Name="Cart"  Height="100" Width="400" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+        <TextBlock Text="Cart" Height="15" Width="50" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20,0,0,105" Foreground="White"/>
+        <ListBox Name="Cart" Height="80" Width="300" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20">
             
         </ListBox>
 
-        <Button Name="AddBtn" Content="Add" Height="40" Width="50" VerticalAlignment="Bottom" Margin="0,0, 0. 20" Click="AddBtn_Click"/>
+        <TextBlock Text="ADD NEW ITEM:" FontSize="20" FontWeight="Black" Foreground="White" Width="160" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0, 0, 90, 230"/>
+        <TextBlock Text="Name" Foreground="White" Width="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0, 0, 260, 210"/>
+        <TextBox Name="NameField" Height="40" Width="300" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0, 0, 20, 170"/>
+        <TextBlock Text="Price" Foreground="White" Width="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0, 0, 260, 150"/>
+        <TextBox Name="PriceField" Height="40" Width="300" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0, 0, 20, 110"/>
+        <TextBlock Text="Description" Foreground="White" Width="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0, 0, 260, 90"/>
+        <TextBox Name="DescriptionField" Height="40" Width="300" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0, 0, 20, 50"/>
+        <Button Name="OkBtn" Height="20" Width="80" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0, 0, 120, 20" Content="Ok" Click="OkBtn_Click"/>
+
     </Grid>
 </Window>
