@@ -26,8 +26,6 @@ namespace ListBoxLesson
 
             Product product = new Product("Potato", 30, "Grey");
             Shop.Items.Add(product);
-
-           
         }
 
         private void OkBtn_Click(object sender, RoutedEventArgs e)
@@ -50,7 +48,6 @@ namespace ListBoxLesson
 
             public string Name { get; set; }
             public int Price { get; set; }
-
             public string Description { get; set; }
 
             public override string ToString()
@@ -66,13 +63,10 @@ namespace ListBoxLesson
            if( Shop.SelectedItem != null)
            {
                 Product product = Shop.SelectedItem as Product;
-
-
                 DescriptionOutput.Text = product.Description;
            }
         }
 
-       
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
             Cart.Items.Add(Shop.SelectedItem);
