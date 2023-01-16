@@ -54,8 +54,6 @@ namespace ListBoxLesson
             {
                 return $"{Name}: {Price}";
             }
-
-
         }
 
         private void Shop_SelectionChanged(object sender, SelectionChangedEventArgs e)
